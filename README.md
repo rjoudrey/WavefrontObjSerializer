@@ -8,42 +8,41 @@ Serialize 3D models into .OBJ and .MTL
 require(['WavefrontObjSerializer'], function(WavefrontObjSerializer) {
   var serializer = new WavefrontObjSerializer();
   var myModel = {
-        name: 'model',
-        materials: [
-          {
-            textureMaps: {
-              diffuse: 'diffuse.jpg',
-              specular: 'specular.jpg'
-            },
-            name: 'material1'
-          }
-        ],
-        meshes: [
-          {
-            vertices: [0, 0, 1, 0, 1, 0, 0, 0, 1],
-            normals: [0, 0, 1],
-            texCoords: [0, 1, 1, 0, 1, 1],
-            indices: {
-              vertex: [0, 1, 2],
-              normal: [0, 0, 0],
-              texCoord: [0, 1, 0]
-            },
-            material: 0,
-            name: 'mesh1'
-          },
-          {
-            vertices: [0, 0, 1, 0, 1, 0, 0, 0, 1],
-            normals: [0, 0, 1],
-            indices: {
-              vertex: [0, 1, 2],
-              normal: [0, 0, 0]
-            },
-            name: 'mesh2'
-          }
-        ]
-      };
-    }
-  );
+    name: 'model',
+    materials: [
+      {
+        textureMaps: {
+          diffuse: 'diffuse.jpg',
+          specular: 'specular.jpg'
+        },
+        name: 'material1'
+      }
+    ],
+    meshes: [
+      {
+        vertices: [0, 0, 1, 0, 1, 0, 0, 0, 1],
+        normals: [0, 0, 1],
+        texCoords: [0, 1, 1, 0, 1, 1],
+        indices: {
+          vertex: [0, 1, 2],
+          normal: [0, 0, 0],
+          texCoord: [0, 1, 0]
+        },
+        material: 0,
+        name: 'mesh1'
+      },
+      {
+        vertices: [0, 0, 1, 0, 1, 0, 0, 0, 1],
+        normals: [0, 0, 1],
+        indices: {
+          vertex: [0, 1, 2],
+          normal: [0, 0, 0]
+        },
+        name: 'mesh2'
+      }
+    ]
+  };
+});
 ```
 
 serializer.serializeObj(myModel) evaluates to:
